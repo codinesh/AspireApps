@@ -53,7 +53,7 @@ namespace AspireAppsWebApiViews.Controllers
                 cmd.Parameters.AddWithValue("@AgeGroup", surveyData.AgeGroup);
                 cmd.Parameters.AddWithValue("@Employment", surveyData.Employment);
                 cmd.Parameters.AddWithValue("@Option", surveyData.Option);
-                cmd.Parameters.AddWithValue("@EmploymentCategory", surveyData.EmploymentCategory);
+                cmd.Parameters.AddWithValue("@EntertainmentCategory", surveyData.EntertainmentCategory);
 
                 try
                 {
