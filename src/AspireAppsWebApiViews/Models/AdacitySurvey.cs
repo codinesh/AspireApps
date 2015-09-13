@@ -8,6 +8,7 @@ namespace AspireAppsWebApiViews.Models
 {
     public class AdacitySurvey
     {
+        public int ID { get; set; }
         [DisplayName("Age Group")]
         public string AgeGroup { get; set; }
         public string Employment { get; set; }

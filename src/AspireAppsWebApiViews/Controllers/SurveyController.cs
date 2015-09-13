@@ -8,12 +8,27 @@ using Microsoft.AspNet.Mvc;
 
 namespace AspireAppsWebApiViews.Controllers
 {
-    public class Survey : Controller
+    public class SurveyController : Controller
     {
+        public AdacitySurveyController APIController
+        {
+            get
+            {
+                return new AdacitySurveyController();
+            }
+        }
+
         [HttpGet]
         public IActionResult Add()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Dashboard()
+        {
+            var result = APIController.GetSurveys();
+            return View(result);
         }
     }
 }

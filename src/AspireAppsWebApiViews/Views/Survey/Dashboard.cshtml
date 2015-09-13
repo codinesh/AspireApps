@@ -1,0 +1,72 @@
+﻿@model IEnumerable<AspireAppsWebApiViews.Models.AdacitySurvey>
+
+@{
+    ViewBag.Title = "Add Survey";
+}
+
+<section class="panel panel-primary row myForm">
+    <div class="panel-heading">
+        <h3 class="panel-title">Add Survey Data</h3>
+    </div>
+
+    <table class="display" id="example">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>AgeGroup</th>
+                <th>Employment</th>
+                <th>Option</th>
+                <th>EntertainmentCategory</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var survey in Model)
+            {
+                <tr>
+                    <td>@survey.ID</td>
+                    <td>@survey.AgeGroup</td>
+                    <td>@survey.Employment</td>
+                    <td>@survey.Option</td>
+                    <td>@survey.EntertainmentCategory</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="panel-body">
+    </div>
+</section>
+
+@section styles{
+    <link href="~/lib/datatables/media/css/datatables.bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/datatables/media/css/datatables.bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/lib/datatables/media/css/jquery.datatables.css" rel="stylesheet" />
+    <link href="~/lib/datatables/media/css/jquery.datatables.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .myForm {
+            margin: 10px;
+        }
+
+        input[type=text], textarea {
+            min-width: 450px;
+        }
+    </style>
+}
+
+@section scripts{
+    <script src="~/ib/datatables/media/js/jquery.js"></script>
+    <script src="~/ib/datatables/media/js/jquery.datatables.js"></script>
+    <script src="~/ib/datatables/media/js/jquery.datatables.min.js"></script>
+    <script src="~/lib/datatables/media/js/datatables.bootstrap.js"></script>
+    <script src="~/lib/datatables/media/js/datatables.bootstrap.min.js"></script>
+    <script src="~/lib/datatables/media/js/datatables.foundation.js"></script>
+    <script src="~/lib/datatables/media/js/datatables.foundation.min.js"></script>
+    <script src="~/lib/datatables/media/js/datatables.jqueryui.js"></script>
+    <script src="~/lib/datatables/media/js/datatables.jqueryui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#example").DataTable();
+        });
+    </script>
+}

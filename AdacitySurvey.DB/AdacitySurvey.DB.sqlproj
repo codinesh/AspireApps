@@ -65,5 +65,9 @@
     <Build Include="Tables\AdacitySurvey.sql" />
     <Build Include="Procedures\SaveSurvey.sql" />
     <Build Include="Schemas\adacitySurvey.sql" />
+    <Build Include="Procedures\GetSurveys.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AdacitySurvey.DB.publish.xml" />
   </ItemGroup>
 </Project>
